@@ -1,5 +1,9 @@
-  
 <div class="container">
-  <h1>{{ message }}</h1>
+  <h1>Hello from Diksha! {{ userName }}</h1>
+
+  <!-- Two-Way Data Binding Input -->
+  <input type="text" [(ngModel)]="userName" placeholder="Enter your name" />
+
+  <!-- Clickable Logo to Open a New Tab -->
   <img [src]="logo" alt="Logo" width="200" class="logo" (click)="openLogo()" />
 </div>
