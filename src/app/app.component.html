@@ -2,8 +2,10 @@
   <h1>Hello from Diksha! {{ userName }}</h1>
 
   <!-- Two-Way Data Binding Input -->
-  <input type="text" [(ngModel)]="userName" placeholder="Enter your name" />
+  <input type="text" [(ngModel)]="userName" (ngModelChange)="validateName()" placeholder="Enter your name" /><br>
 
   <!-- Clickable Logo to Open a New Tab -->
-  <img [src]="logo" alt="Logo" width="200" class="logo" (click)="openLogo()" />
+  <img [src]="logo" alt="Logo" width="200" class="logo" (click)="openLogo()" /><br>
+
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
 </div>
